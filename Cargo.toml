@@ -1,8 +1,17 @@
 [package]
 name = "k3sgen"
 version = "0.1.0"
-edition = "2021"
+edition = "2021" 
+description = "A cli tool for automate k3s clusters." ## crates.io için hazırlanan bilgileri kullan.
+authors = ["herhalde"]
+
+
+
+
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+ssh2 = "0.9.4"
+clap = {version = "4.4.11", features = ["derive","cargo"]}
+colored ={ version = "2.1.0"}
