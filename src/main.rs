@@ -20,22 +20,6 @@ use colored::Colorize;
 use k3sgen::parse::model::CliApp as CliApp;
 
 fn main() {
-    let cli = CliApp::parse();
-
-    println!(r"
-    _     _____                          
-   | | __|___ /  ___   __ _   ___  _ __  
-   | |/ /  |_ \ / __| / _` | / _ \| '_ \ 
-   |   <  ___) |\__ \| (_| ||  __/| | | |
-   |_|\_\|____/ |___/ \__, | \___||_| |_|
-                      |___/              
-  ");
-   
-    if let Some(a) = cli.name {
-        println!("{}",a.red().italic());
-    }
-
-
-
+    println!("Hello, world!");
 }
     
