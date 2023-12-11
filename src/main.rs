@@ -15,16 +15,26 @@ ekstra konfigleri tanımlamaya gerek yok. Nitekim, *--custom-conf-* olararak K3S
 
 */
 
-use clap::Parser;
+use std::fmt::Alignment;
+
+use clap::{Parser, Command};
 use colored::Colorize;
-use k3sgen::parse::model::CliApp as CliApp;
+use k3sgen::parse::model::{CliApp as CliApp, Altkomutlar};
 
 fn main() {
 
-
-
+    let cliApp = CliApp::parse();
 
     
-    println!("Hello, world!");
+   match cliApp.command {
+       Altkomutlar::Init { default:true, only_stdout} => println!("geldi"),
+       _ => println!("debug")
+   }
+
+
+
+
+
+
 }
     
